@@ -8,32 +8,52 @@
     <link rel="stylesheet" href="components/loader.css">
     <link rel="stylesheet" href="css/style.css">
     <script>
-    var nomes = []    
- function cadastrar(){
+         var Nome = [];
+  var professor;
 
- var nomeinserido
- nomeinserido =  document.getElementById('insertnome').value
-
- alert(nomeinserido)
- nomes.push(nomeinserido)
-
- alert(nomes)
-}
+  function Listar() {
+    for (
+      var i = 0; i <= 100; i++) {
+      alert(i);
+    }
+  }
 
 
+  function Inserir() {
+    professor = document.getElementById('nome').value;
+    Nome.push(professor);
+  }
 
+  function Exibir() {
+    for (var i = 0; i < Nome.length; i++) {
+      alert(Nome[i]);
+    }
+  }
+  
+
+  
     </script>
 </head>
 <body>
-    <div class="tudo">
-    <input class="input" type="text" placeholder="Insira o nome" id="insertnome">
-    <br>
-    <br>
-    <input class="botao" type="button" placeholder="cadastrar"  value="cadastrar" onclick=cadastrar()>
-    <br>
-    <br>
-    <br>
-    <h1 id="exibirnome"></h1>
-    </div>
+
+<div class="box">
+  
+  <input type="text" name="nome" id="nome" placeholder="Insira seu Nome">
+
+  <input hidden type="button" value="Listar nomes" onclick="Listar()">
+
+  <input type="button" name="Inserir" value="Inserir" onclick="Inserir()">
+
+  <input type="button" name="Exibir" value="Exibir" onclick="Exibir()">
+</div>
+
+
+<br>
+<br>
+
+
+<h2>Digite os Nomes e insira-os Sequencialmente, após feito isso, Aperte o botão de exibir..</h2>
+
+
 </body>
 </html>
